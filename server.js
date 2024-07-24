@@ -56,7 +56,7 @@ const viewAllDepartments = async () => {
     const res = await db.query('SELECT * FROM department');
     // selects all departments and shows as a row
     console.table(res.rows);
-    // takes back to main menu
+    // takes back to main menu - the case for each instance of this @ end of function
     menu();
 };
 
@@ -83,6 +83,7 @@ const viewAllEmployees = async () => {
         JOIN department ON role.department_id = department.id 
         LEFT JOIN employee manager ON employee.manager_id = manager.id
     `);
+    // more joins due to the foreign key and reference in this code block
     console.table(res.rows);
     menu();
 };
@@ -108,7 +109,7 @@ const addRole = async () => {
         name: department.name,
         value: department.id
     }));
-
+    //  a set of variables to be based on response to prompt
     const { title, salary, department_id } = await inquirer.prompt([
         {
             type: 'input',
@@ -134,7 +135,9 @@ const addRole = async () => {
 
 // Function to add an employee
 const addEmployee = async () => {
+    // select all data from roles
     const roles = await db.query('SELECT * FROM role');
+    // select certain role
     const roleChoices = roles.rows.map(role => ({
         name: role.title,
         value: role.id
