@@ -1,6 +1,6 @@
 # employee-database
 
-*Note* Code from week 12 challenge readme was referenced/used in this project and is referenced in-project via notes
+*Note* Code from week 12 challenge readme was referenced/used in this project and is referenced in-project via notes. Additionally, assistance from the Xpert learning assitant was ustilized and is outlined where applicable as well.
 ## Table of contents
 
 - [Your Task](#your-task)
@@ -72,13 +72,9 @@ This application can be used by cloning the repo into your desired file location
 <br/><br/>
 ```md
 DB_NAME=your_db_name
-<br/>
 DB_USER=your_user
-<br/>
 DB_PASSWORD=your_password
-<br/>
 DB_HOST=localhost
-<br/>
 DB_DIALECT=your_dialect
 ```
 <br/><br/>
