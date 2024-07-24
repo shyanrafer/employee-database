@@ -1,6 +1,7 @@
 node_modules
 package-lock.json
 .ds_store
+.env
 
 # Logs
 logs
